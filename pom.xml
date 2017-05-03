@@ -11,6 +11,7 @@
     <modules>
         <module>consistent-hash</module>
         <module>flying-saucer-pdf</module>
+        <module>memcache</module>
     </modules>
 
 
