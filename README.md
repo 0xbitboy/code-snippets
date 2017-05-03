@@ -5,3 +5,4 @@
 ## 列表
   - [一致性Hash](https://github.com/liaojiacan/code-snippets/tree/master/consistent-hash) ,收集自[《对一致性Hash算法，Java代码实现的深入研究》](http://www.cnblogs.com/xrq730/p/5186728.html)
   - [HTML生成PDF , flying-saucer-pdf](https://github.com/liaojiacan/code-snippets/tree/master/flying-saucer-pdf)
+  - [memcached 的一些使用](https://github.com/liaojiacan/code-snippets/tree/master/memcache)
