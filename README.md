@@ -7,3 +7,5 @@
   - [HTML生成PDF , flying-saucer-pdf](https://github.com/liaojiacan/code-snippets/tree/master/flying-saucer-pdf)
   - [foundation-emails-template,生成兼容各种邮件客户端的邮件模版](https://github.com/zurb/foundation-emails-template)
   - [memcached 的一些使用](https://github.com/liaojiacan/code-snippets/tree/master/memcache)
+  - [redis 的一些使用](https://github.com/liaojiacan/code-snippets/tree/master/redis)
+  - [payload ,记录java相关的一些0day]("https://github.com/liaojiacan/code-snippets/tree/master/payload")
