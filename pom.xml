@@ -14,6 +14,7 @@
         <module>memcache</module>
         <module>redis</module>
         <module>payload</module>
+        <module>java-language</module>
     </modules>
 
     <properties>
