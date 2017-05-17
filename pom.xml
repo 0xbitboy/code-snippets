@@ -15,6 +15,7 @@
         <module>redis</module>
         <module>payload</module>
         <module>java-language</module>
+        <module>data-structure-and-algorithms</module>
     </modules>
 
     <properties>
