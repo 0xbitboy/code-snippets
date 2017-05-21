@@ -16,6 +16,7 @@
         <module>payload</module>
         <module>java-language</module>
         <module>data-structure-and-algorithms</module>
+        <module>spring</module>
     </modules>
 
     <properties>
