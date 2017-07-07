@@ -17,6 +17,7 @@
         <module>java-language</module>
         <module>data-structure-and-algorithms</module>
         <module>spring</module>
+        <module>spring-quartz</module>
     </modules>
 
     <properties>
