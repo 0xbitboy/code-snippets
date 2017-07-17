@@ -18,6 +18,7 @@
         <module>data-structure-and-algorithms</module>
         <module>spring</module>
         <module>spring-quartz-demo</module>
+        <module>spring-zookeeper-property-placeholder</module>
     </modules>
 
     <properties>
