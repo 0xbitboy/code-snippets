@@ -9,3 +9,5 @@
   - [memcached 的一些使用](https://github.com/liaojiacan/code-snippets/tree/master/memcache)
   - [redis 的一些使用](https://github.com/liaojiacan/code-snippets/tree/master/redis)
   - [payload ,记录java相关的一些0day](https://github.com/liaojiacan/code-snippets/tree/master/payload)
+  - [Spring项目定时任务-quartz](https://github.com/liaojiacan/code-snippets/tree/master/spring-quartz-demo)
+  - [Spring项目将*.properties存储到zookeeper](https://github.com/liaojiacan/code-snippets/tree/master/spring-zookeeper-property-placeholder)
