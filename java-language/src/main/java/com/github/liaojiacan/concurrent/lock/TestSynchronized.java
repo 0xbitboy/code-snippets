@@ -1,7 +1,7 @@
 package com.github.liaojiacan.concurrent.lock;
 
 /**
- * synchronized 锁的是 对象
+ * synchronized 锁的是对象
  *
  *  线程 t1 执行m1方法后 就锁了对象，线程t2需要等待t1释放锁
  *
