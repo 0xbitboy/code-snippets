@@ -14,4 +14,4 @@
 
 ## 并发编程
 
-  - [Future业务场景---分解任务，主线程汇总最终的结果](https://github.com/liaojiacan/code-snippets/tree/master/java-language/com/github/liaojiacan/concurrent/executor/AsynchronousTaskResult.java)
+  - [Future业务场景---分解任务，主线程汇总最终的结果](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/concurrent/executor/AsynchronousTaskResult.java)
