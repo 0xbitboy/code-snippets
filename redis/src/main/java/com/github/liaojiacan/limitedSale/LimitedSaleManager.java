@@ -3,6 +3,8 @@ package com.github.liaojiacan.limitedSale;
 import redis.clients.jedis.Jedis;
 
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  *
@@ -28,7 +30,7 @@ public class LimitedSaleManager {
     }
 
 
-    public boolean tryRequest(int goodId,int uid){
+    public boolean tryRequest(int goodId,long uid){
         Object obj = jedis.lpop("good:"+goodId);
         if(obj!=null){
             jedis.lpush("order:"+goodId,uid+"");
@@ -47,7 +49,27 @@ public class LimitedSaleManager {
 
     public static void main(String[] args) {
 
-//        Jedis jedis = new Jedis("",)
+        Jedis jedis = new Jedis("localhost", 6379);
+
+        LimitedSaleManager limitedSaleManager = new LimitedSaleManager(jedis);
+
+        limitedSaleManager.initGood(1,10);
+
+        ExecutorService executor = Executors.newFixedThreadPool(1000);
+
+        final boolean[] finish = {false};
+
+        while (!finish[0]){
+
+            executor.submit(()->{
+                boolean success = limitedSaleManager.tryRequest(1, Thread.currentThread().getId());
+                if(success)
+                     System.out.println(Thread.currentThread().getName()+":success!");
+
+                finish[0] =false;
+            });
+        }
+
 
     }
 
