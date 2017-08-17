@@ -24,14 +24,10 @@ public class JedisZsetTest {
         jedis.zadd("myzset",2,"2");
         jedis.zadd("myzset",3,"3");
         jedis.zadd("myzset",4,"4");
-
         // 元素个数
         System.out.println(jedis.zcard("myzset"));
         //整个集合
         System.out.println(jedis.zrange("myzset", 0, -1));
-
-
-
 
 
     }
