@@ -1,6 +1,7 @@
 package com.github.liaojiacan.agg;
 
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
 
 import java.util.Collections;
@@ -13,20 +14,20 @@ import java.util.Set;
 public class AggManager {
 
 
-    private RedisTemplate<String,String> redisTemplate;
-    private ZSetOperations<String,String> zSetOperations;
+    private RedisTemplate redisTemplate;
+    private ZSetOperations zSetOperations;
 
 
 
-    public AggManager(RedisTemplate<String, String> redisTemplate) {
+    public AggManager(RedisTemplate redisTemplate) {
         this.redisTemplate = redisTemplate;
         this.zSetOperations = redisTemplate.opsForZSet();
     }
 
 
-    public boolean counter(String counterName,long vaule){
+    public boolean counter(String counterName,Object vaule){
         long ts  = System.currentTimeMillis();
-        return zSetOperations.add(counterName,vaule+"",ts);
+        return zSetOperations.add(counterName,vaule,ts);
     }
 
     public long zCount(String counterName,long period){
@@ -38,10 +39,10 @@ public class AggManager {
     public long zSum(String counterName,long period){
         long now = System.currentTimeMillis();
         long tts = now - period;
-        Set<String> values = zSetOperations.rangeByScore(counterName, tts + 1, Long.MAX_VALUE);
+        Set values = zSetOperations.rangeByScore(counterName, tts + 1, Long.MAX_VALUE);
         long sum  = 0;
-        for(String value:values){
-            sum+=Long.valueOf(value);
+        for(Object value:values){
+            sum+=(Long)(value);
         }
         return  sum;
     }

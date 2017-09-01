@@ -29,9 +29,8 @@ public class RedisTest {
     @Test
     public void zSet(){
         ZSetOperations ops = redisTemplate.opsForZSet();
-
-        for(int i=0;i<10;i++){
-            ops.add("count1",i,i);
+        for(int i=0;i<100000;i++){
+            ops.add("test100000",i,i);
         }
 
     }
@@ -40,7 +39,7 @@ public class RedisTest {
     @Test
     public void zRange(){
 
-        Set values = redisTemplate.opsForZSet().rangeByScore("count1", 0, 6);
+        Set<ZSetOperations.TypedTuple> values = redisTemplate.opsForZSet().reverseRangeByScoreWithScores("test100000", 0, 100000);
 
         System.out.println(JSON.toJSONString(values));
 

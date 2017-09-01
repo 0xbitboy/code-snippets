@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -24,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class AggManagerTest {
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private StringRedisTemplate redisTemplate;
 
     private AggManager aggManager;
 
@@ -41,12 +42,13 @@ public class AggManagerTest {
             Thread.sleep(100);
         }
 
+
     }
 
     @Test
     public void zCount() throws Exception {
 
-        System.out.println(aggManager.zCount("count1", TimeUnit.MINUTES.toMillis(10)));
+//        System.out.println(aggManager.zCount("count1", TimeUnit.MINUTES.toMillis(10)));
     }
 
     public void zSum() throws Exception {
