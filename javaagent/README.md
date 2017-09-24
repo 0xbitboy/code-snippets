@@ -2,7 +2,7 @@
 
   可以对需要运行的class进行hack
 
-## 1.实现一个ClassFileTransformer
+### 1.实现一个ClassFileTransformer
 
 ```
 public class SimpleTransformer implements ClassFileTransformer {
@@ -17,7 +17,7 @@ public class SimpleTransformer implements ClassFileTransformer {
 }
 ```
 
-## 2.实现一个Premain-Class
+### 2.实现一个Premain-Class
 
 ```
 
@@ -33,7 +33,7 @@ public class Main {
 
 ```
 
-## 3.MANIFEST.MF配置
+### 3.MANIFEST.MF配置
 
 ```
 Manifest-Version: 1.0
@@ -41,6 +41,10 @@ Premain-Class: com.github.liaojiacan.Main
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
 Can-Set-Native-Method-Prefix: true
+```
 
+### 4.运行命令
 
+```
+java -javaagent:agent.jar -jar app.jar
 ```
