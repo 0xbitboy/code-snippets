@@ -1,5 +1,6 @@
 Manifest-Version: 1.0
 Premain-Class: com.github.liaojiacan.Main
+Main-Class: com.github.liaojiacan.Main
 Can-Redefine-Classes: true
 Can-Retransform-Classes: true
 Can-Set-Native-Method-Prefix: true
