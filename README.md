@@ -13,6 +13,7 @@
   - [Spring项目将*.properties存储到zookeeper,适合分布式项目](https://github.com/liaojiacan/code-snippets/tree/master/spring-zookeeper-property-placeholder)
   - [javaagent对java程序的一些Hack](https://github.com/liaojiacan/code-snippets/tree/master/javaagent)
   - [javassist破解收费IDEA插件iedis](https://github.com/liaojiacan/code-snippets/blob/master/javaagent/src/main/java/com/github/liaojiacan/demo/IedisCracker.java)
+  - [redis实现附近的人](https://github.com/liaojiacan/code-snippets/blob/master/redis/src/main/java/com/github/liaojiacan/geo/RedisPeopleNearByServiceImpl.java)
 
 
 
