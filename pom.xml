@@ -20,6 +20,7 @@
         <module>spring-quartz-demo</module>
         <module>spring-zookeeper-property-placeholder</module>
         <module>javaagent</module>
+        <module>grpc-java</module>
     </modules>
 
     <properties>
