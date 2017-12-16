@@ -21,6 +21,7 @@
         <module>spring-zookeeper-property-placeholder</module>
         <module>javaagent</module>
         <module>grpc-java</module>
+        <module>function-design</module>
     </modules>
 
     <properties>
