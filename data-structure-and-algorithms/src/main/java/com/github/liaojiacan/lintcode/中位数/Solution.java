@@ -3,50 +3,59 @@ package com.github.liaojiacan.lintcode.中位数;
 public class Solution {
 
     public int solution(int[] nums){
-        return quicksort(nums,0,nums.length-1);
+        if(nums==null || nums.length == 1){
+            return nums[0];
+        }
+
+        int l = 0,r = nums.length-1,mid = (nums.length+1)/2;
+
+        while (true){
+            int pivot = partion(nums,l,r);
+            if(pivot+1==mid){
+                return nums[pivot];
+            }else if(pivot+1<mid){
+                l = pivot+1;
+            }else {
+                r = pivot -1;
+            }
+        }
+
     }
 
     public static void main(String[] args) {
-        int[] nums = {4, 5, 1, 2, 3};
+        int[] nums = {-1,-2,-3,-100,-1,-50};
         System.out.println(new Solution().solution(nums));
     }
     /**
      * 取第一个数作为参考点，从右边向左扫描直到找到比参考点小的数，进行交换。
      *
      * @param nums
-     * @param left
-     * @param right
+     * @param start
+     * @param end
      * @return
      */
-    int partion(int[] nums,int left , int right){
-        int temp = nums[left];
-        while (left<right){
-            while (temp<nums[right] && left<right){
-                --right;
+
+    private int partion(int[] nums, int start, int end){
+        int l = start, r = end, pivot = nums[start];
+        while (l <= r) {
+            while (l <= r && nums[l] <= pivot) {
+                l++;
             }
-            nums[left] = nums[right];
-            while (temp>nums[left] && left<right){
-                ++left;
+            while (l <= r && nums[r] >= pivot) {
+                r--;
             }
-            nums[right] = nums[left];
+            if (l <= r) {
+                swap(nums, l++, r--);
+            }
         }
-        nums[left] = temp;
-        return left;
+        swap(nums, start, r);
+        return r;
     }
+    private void swap(int[] nums,int i,int j){
+        int tmp = nums[i];
+        nums[i]= nums[j];
+        nums[j] = tmp;
 
-    int quicksort(int[] nums,int left,int right){
-
-        int pivot;
-        if(left>=right){
-            return nums[left];
-        }
-        pivot = partion(nums,left,right);
-        if(pivot==nums.length/2){
-            return nums[pivot];
-        }
-        partion(nums,left,pivot-1);
-        partion(nums,pivot+1,right);
-        return -1;
     }
 
 }
