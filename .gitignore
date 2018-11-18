@@ -6,3 +6,4 @@ flying-saucer-pdf/target/
 spring-zookeeper-property-placeholder/target/
 javaagent/target
 grpc-java/target
+redis/target/
