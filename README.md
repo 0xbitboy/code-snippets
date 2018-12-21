@@ -14,6 +14,7 @@
   - [javaagent对java程序的一些Hack](https://github.com/liaojiacan/code-snippets/tree/master/javaagent)
   - [javassist破解收费IDEA插件iedis](https://github.com/liaojiacan/code-snippets/blob/master/javaagent/src/main/java/com/github/liaojiacan/demo/IedisCracker.java)
   - [redis实现附近的人](https://github.com/liaojiacan/code-snippets/blob/master/redis/src/main/java/com/github/liaojiacan/geo/RedisPeopleNearByServiceImpl.java)
+  - [java 8](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/java8)
 
 ## 并发编程
 
