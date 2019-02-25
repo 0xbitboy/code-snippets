@@ -1,6 +1,6 @@
 # 代码片段
 
-  记录一些平时收集或者自己写的代码片段、Spring配置、项目架构、算法等
+  记录一些平时收集或者自己写的代码片段、Spring配置、项目架构、算法、文章等
 
 ## 列表
   - [一致性Hash](https://github.com/liaojiacan/code-snippets/tree/master/consistent-hash) ,收集自[《对一致性Hash算法，Java代码实现的深入研究》](http://www.cnblogs.com/xrq730/p/5186728.html)
@@ -16,9 +16,28 @@
   - [redis实现附近的人](https://github.com/liaojiacan/code-snippets/blob/master/redis/src/main/java/com/github/liaojiacan/geo/RedisPeopleNearByServiceImpl.java)
   - [java 8](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/java8)
 
+## Java 语言特性相关
+
+- [类初始化先后顺序](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/classinit)
+
+- [对存在空值的集合进行排序](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/comparator/Example.java)
+
+- [并发包中的一些使用用例/ExecutorService/Future/CountDownLatch/CyclicBarrier](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/concurrent)
+
+- [Java8 lambda的使用用例](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/java8/lambda)
+
+- [Java8 Stream的使用用例](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/java8/stream/Example.java)
+
+- [利用反射获取包级别限制的类的静态成员](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/reflection/ReflectAClassWithPackageLevelAccess.java)
+
+- [Unsafe操作数组的使用测试用例](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/unsafe/UnsafeArrayOperationTests.java)
+
 ## 并发编程
 
+  - [JDK1.7中ConcurrentHashMap的源码解读](https://github.com/liaojiacan/code-snippets/issues/6) 2019-02-25
+
   - [Future业务场景---分解任务，主线程汇总最终的结果](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/concurrent/executor/AsynchronousTaskResult.java)
+
 
 ## 业务开发
 
