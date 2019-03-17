@@ -8,3 +8,4 @@ javaagent/target
 grpc-java/target
 redis/target/
 java-language/target
+function-design/target

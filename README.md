@@ -19,23 +19,17 @@
 ## Java 语言特性相关
 
 - [类初始化先后顺序](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/classinit)
-
 - [对存在空值的集合进行排序](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/comparator/Example.java)
-
 - [并发包中的一些使用用例/ExecutorService/Future/CountDownLatch/CyclicBarrier](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/concurrent)
-
 - [Java8 lambda的使用用例](https://github.com/liaojiacan/code-snippets/tree/master/java-language/src/main/java/com/github/liaojiacan/java8/lambda)
-
 - [Java8 Stream的使用用例](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/java8/stream/Example.java)
-
 - [利用反射获取包级别限制的类的静态成员](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/reflection/ReflectAClassWithPackageLevelAccess.java)
-
 - [Unsafe操作数组的使用测试用例](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/unsafe/UnsafeArrayOperationTests.java)
+- [自定义ClassLoader实现一个支持热加载的应用启动器](https://github.com/liaojiacan/code-snippets/issues/8)  2019-03-17
 
 ## 并发编程
 
   - [JDK1.7中ConcurrentHashMap的源码解读](https://github.com/liaojiacan/code-snippets/issues/6) 2019-02-25
-
   - [Future业务场景---分解任务，主线程汇总最终的结果](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/concurrent/executor/AsynchronousTaskResult.java)
 
 
