@@ -9,3 +9,4 @@ grpc-java/target
 redis/target/
 java-language/target
 function-design/target
+spring/target
