@@ -31,7 +31,7 @@
 
   - [JDK1.7中ConcurrentHashMap的源码解读](https://github.com/liaojiacan/code-snippets/issues/6) 2019-02-25
   - [Future业务场景---分解任务，主线程汇总最终的结果](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/concurrent/executor/AsynchronousTaskResult.java)
-
+  - [使用wait和notify实现多线程交替打印](https://github.com/liaojiacan/code-snippets/blob/master/code-snippets/java-language/src/main/java/com/github/liaojiacan/thread/MultiThreadPrint.java)
 
 ## 业务开发
 

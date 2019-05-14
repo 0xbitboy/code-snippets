@@ -18,3 +18,5 @@
 7. [Unsafe操作数组的使用测试用例](https://github.com/liaojiacan/code-snippets/blob/master/java-language/src/main/java/com/github/liaojiacan/unsafe/UnsafeArrayOperationTests.java)
 
 8. [自定义ClassLoader实现一个支持热加载的应用启动器](https://github.com/liaojiacan/code-snippets/issues/8)
+
+9. [使用wait和notify实现多线程交替打印](https://github.com/liaojiacan/code-snippets/blob/master/code-snippets/java-language/src/main/java/com/github/liaojiacan/thread/MultiThreadPrint.java)
