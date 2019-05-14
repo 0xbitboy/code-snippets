@@ -1,4 +1,4 @@
-package com.gitbub.liaojiacan.helloworld;
+package com.github.liaojiacan.helloworld;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
