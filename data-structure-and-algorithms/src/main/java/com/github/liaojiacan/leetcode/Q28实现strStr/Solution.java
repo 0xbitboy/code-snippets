@@ -41,7 +41,5 @@ class Solution {
 		return -1;
 	}
 
-	public static void main(String[] args) {
-		System.out.println(new Solution().strStr("mississippi","pi"));
-	}
+
 }
