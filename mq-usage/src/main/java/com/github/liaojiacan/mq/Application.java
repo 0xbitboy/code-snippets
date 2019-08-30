@@ -10,9 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class MqUsageApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication springApplication = new SpringApplication();
+        SpringApplication.run(Application.class,args);
     }
 }

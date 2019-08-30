@@ -1,5 +1,8 @@
 package com.github.liaojiacan.helloworld;
 
+import com.gitbub.liaojiacan.helloworld.GreeterGrpc;
+import com.gitbub.liaojiacan.helloworld.HelloReply;
+import com.gitbub.liaojiacan.helloworld.HelloRequest;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;

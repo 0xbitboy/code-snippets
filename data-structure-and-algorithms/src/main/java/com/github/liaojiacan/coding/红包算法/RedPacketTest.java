@@ -1,6 +1,7 @@
 package com.github.liaojiacan.coding.红包算法;
 
-import com.sun.tools.javac.util.Assert;
+
+import com.google.common.base.Preconditions;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
@@ -21,9 +22,9 @@ public class RedPacketTest {
 
     public Long[] allocate(Long amount, int number) {
 
-        Assert.check(amount > 0, "amount must greater than 0");
-        Assert.check(number > 0, "number must greater than 0");
-        Assert.check(amount >= number, "amount must greater than or equals number");
+        Preconditions.checkArgument(amount > 0, "amount must greater than 0");
+        Preconditions.checkArgument(number > 0, "number must greater than 0");
+        Preconditions.checkArgument(amount >= number, "amount must greater than or equals number");
         Long[] ans = new Long[number];
         for (int i = 0; i < number; i++) {
             long per = 1L + ThreadLocalRandom.current().nextLong(0, amount - (number - i));
