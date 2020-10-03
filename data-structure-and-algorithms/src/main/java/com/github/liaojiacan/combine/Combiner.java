@@ -1,6 +1,6 @@
 package com.github.liaojiacan.combine;
 
-import com.sun.tools.javac.util.Assert;
+import com.google.common.base.Preconditions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class Combiner {
 	 * @return
 	 */
 	public static <T> List<List<T>> combine(List<T> originList, int combinationSize){
-		Assert.check(originList.size() >=combinationSize,"originList size should greater than combinationSize");
+		Preconditions.checkArgument(originList.size() >=combinationSize,"originList size should greater than combinationSize");
 		if(originList.size() == combinationSize ){
 			List<List<T>> result  = new ArrayList<>(1);
 			result.add(originList);

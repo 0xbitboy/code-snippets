@@ -10,3 +10,7 @@ redis/target/
 java-language/target
 function-design/target
 spring/target
+data-structure-and-algorithms/target/data-structure-and-algorithms-1.0-SNAPSHOT.jar
+consistent-hash/target/
+data-structure-and-algorithms/target/
+payload/target/
