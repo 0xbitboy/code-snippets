@@ -14,3 +14,7 @@ data-structure-and-algorithms/target/data-structure-and-algorithms-1.0-SNAPSHOT.
 consistent-hash/target/
 data-structure-and-algorithms/target/
 payload/target/
+disruptor/target/disruptor-1.0-SNAPSHOT.jar
+disruptor/target/
+mq-usage/target/mq-usage-1.0-SNAPSHOT.jar
+mq-usage/target/
