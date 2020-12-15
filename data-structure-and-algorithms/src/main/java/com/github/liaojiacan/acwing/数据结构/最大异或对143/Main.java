@@ -1,4 +1,4 @@
-package com.github.liaojiacan.acwing.最大异或对143;
+package com.github.liaojiacan.acwing.数据结构.最大异或对143;
 
 import java.util.Scanner;
 

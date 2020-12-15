@@ -1,4 +1,4 @@
-package com.github.liaojiacan.acwing.Trie字符串统计853;
+package com.github.liaojiacan.acwing.数据结构.Trie字符串统计853;
 
 /**
  * @author liaojiacan
@@ -9,19 +9,18 @@ import java.util.*;
 
 public class Main{
 
-    public static class Trie{
 
-        class TrieNode{
-
-            public TrieNode[] child = new TrieNode[26];
-            public int cnt;
-            public char value;
-
-            public TrieNode(char c){
-                this.value = c;
-            }
-
+    public static class TrieNode{
+        public TrieNode[] child = new TrieNode[26];
+        public int cnt;
+        public char value;
+        public TrieNode(char c){
+            this.value = c;
         }
+    }
+
+
+    public static class Trie{
 
 
         TrieNode root = new TrieNode('#');
@@ -38,9 +37,7 @@ public class Main{
                 node = node.child[c-'a'] ;
 
             }
-
             node.cnt ++;
-
         }
 
         public int queryCnt(String str){
