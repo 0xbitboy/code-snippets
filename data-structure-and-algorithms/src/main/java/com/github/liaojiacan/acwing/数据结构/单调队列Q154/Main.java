@@ -1,58 +1,54 @@
 package com.github.liaojiacan.acwing.数据结构.单调队列Q154;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Scanner;
-
-/**
- * @author liaojiacan
- * @date 2020/12/15
- * @desc
- */
-public class Main {
+import java.io.*;
+import java.util.*;
+public class Main{
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
-        Scanner scanner = new Scanner(System.in);
-        Deque<Integer> queue = new LinkedList<>();
-        int n = scanner.nextInt();
-        int k = scanner.nextInt();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+        String[] s1 = reader.readLine().split(" ");
+        int n = Integer.parseInt(s1[0]);
+        int k = Integer.parseInt(s1[1]);
+        String[] s = reader.readLine().split(" ");
         int[] nums = new int[n];
-        for (int i = 0; i < n; i++) {
-            nums[i] = scanner.nextInt();
+        for(int i = 0 ; i < n ;++i){
+            nums[i] = Integer.parseInt(s[i]);
         }
 
-        for (int i = 0; i < n; i++) {
-            while (!queue.isEmpty() && nums[queue.peekLast()] > nums[i]){
+        Deque<Integer> queue = new LinkedList<>();
+        for(int i= 0; i < n ; ++i){
+            while(!queue.isEmpty() && nums[queue.peekLast()] >= nums[i]){
                 queue.pollLast();
             }
-            queue.offerFirst(i);
-            if(!queue.isEmpty() && queue.peekLast() < i - k + 1){
-                queue.pollLast();
+            while(!queue.isEmpty() && queue.peekFirst() < i - k +1){
+                queue.pollFirst();
             }
+            queue.offerLast(i);
             if(i >= k-1 ){
-                System.out.print(nums[queue.peekFirst()]+" ");
+                writer.write(nums[queue.peekFirst()] +" ");
             }
         }
-        System.out.print("\n");
         queue.clear();
-        for (int i = 0; i < n; i++) {
-            if (!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]){
-                queue.pollLast();
-            }
-            queue.offerFirst(i);
-            if(!queue.isEmpty() && queue.peekLast() < i - k + 1){
-                queue.pollLast();
-            }
+        writer.write("\n");
+        for(int i= 0; i < n ; ++i){
 
-            if(queue.size() == k){
-                System.out.print(nums[queue.peek()]+" ");
+            while(!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]){
+                queue.pollLast();
+            }
+            while(!queue.isEmpty() && queue.peekFirst() < i - k +1){
+                queue.pollFirst();
+            }
+            queue.offerLast(i);
+            if(i >= k-1){
+                writer.write(nums[queue.peekFirst()] +" ");
             }
         }
-
-
-
+        writer.flush();
+        writer.close();
+        reader.close();
     }
 
 }
