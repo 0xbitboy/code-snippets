@@ -1,7 +1,7 @@
 package com.github.liaojiacan.coding.LFU实现;
 
 public abstract class LFUCache<K,V>{
-    private int capacity;
+    protected int capacity;
     public LFUCache(int capacity) {
         this.capacity = capacity;
     }

@@ -1,38 +1,43 @@
 package com.github.liaojiacan.acwing.基础算法.堆排序;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+
 /**
  * @author liaojiacan
  * @date 2020/12/22
  * @desc
  */
-import java.util.*;
-import java.io.*;
 public class Main{
 
-    static class Heap{
+    static class BigHeap{
 
         public int[] data;
         public int size;
-        public Heap(int capcity){
+        public BigHeap(int capacity){
             this.size = 0;
-            data = new int[capcity+1];
+            data = new int[capacity+1];
         }
+        public int left(int i){return i << 1;}
+        public int right(int i){return (i << 1) + 1;}
+        public int parent(int i){return i >> 1;}
 
-        void up(int idx){
-            int p = idx / 2;
-            if(data[p] < data[idx]){
-                swap(p, idx);
+        void up(int i){
+            int p = parent(i);
+            if(p > 0 && data[p] < data[i]){
+                swap(p,i);
                 up(p);
             }
-
         }
 
-        void down(int idx){
-            int t = idx;
-            if(idx* 2 < size && data[idx*2] > data[idx]) t = idx*2;
-            if(idx*2 + 1 < size && data[idx*2+1] > data[idx]) t= idx*2+1;
-            if(t != idx){
-                swap(t, idx);
+        void down(int i){
+            int t = i;
+            if(left(i) <= size && data[left(i)] > data[i]) t = left(i);
+            if(right(i) <= size && data[right(i)] > data[t]) t = right(i);
+            if( t != i){
+                swap(t,i);
                 down(t);
             }
         }
@@ -42,13 +47,6 @@ public class Main{
             data[++size] = value;
             up(size);
         }
-
-        void delete(int idx){
-            data[idx] = data[size--];
-            down(idx);
-            up(idx);
-        }
-
 
 
         void swap(int i,int j){
@@ -61,10 +59,16 @@ public class Main{
             return data[1];
         }
 
-        void removeTop(){
-            delete(1);
+        int removeTop(){
+            int res = data[1];
+            data[1] = data[size--];
+            down(1);
+            return res;
         }
 
+        boolean isEmpty(){
+            return size == 0;
+        }
     }
 
 
@@ -76,20 +80,29 @@ public class Main{
         int n = Integer.parseInt(s[0]);
         int m = Integer.parseInt(s[1]);
         s = reader.readLine().split(" ");
-        Heap heap = new Heap(m);
+        BigHeap bigHeap = new BigHeap(m);
         for(int i = 0 ;i<n ; ++i){
             int v = Integer.parseInt(s[i]);
-            if(heap.size <= m){
-                heap.insert(v);
-            }else if(v < heap.top()){
-                heap.removeTop();
-                heap.insert(v);
+            if(bigHeap.size < m){
+                bigHeap.insert(v);
+            }else if(v < bigHeap.top()){
+                bigHeap.removeTop();
+                bigHeap.insert(v);
             }
         }
 
-        for(int i = m ; i > 0 ; i--){
-            System.out.print(heap.data[i] + " ");
+        int[] nums = new int[m];
+
+        for (int i = m-1; i >= 0; i--) {
+            nums[i] = bigHeap.removeTop();
         }
 
+        for (int i = 0; i < m; i++) {
+            wirter.write(nums[i]+" ");
+        }
+
+        wirter.flush();
+        wirter.close();
+        reader.close();
     }
 }
