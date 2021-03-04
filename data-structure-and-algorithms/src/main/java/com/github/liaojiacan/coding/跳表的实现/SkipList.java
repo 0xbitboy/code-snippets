@@ -108,7 +108,7 @@ public class SkipList<K extends Comparable,V> {
     private SkipListNode<K, V> findNode(K key) {
         SkipListNode<K,V> h = this.head;
         while (true){
-            if(h.next !=null && (h.next.key == null || ((Comparable)h.next.key).compareTo(key) <= 0)){
+            if(h.next !=null && (h.next.key != null && ((Comparable)h.next.key).compareTo(key) <= 0)){
                h = h.next;
             }
             if(h.down != null){
@@ -123,7 +123,10 @@ public class SkipList<K extends Comparable,V> {
     public static void main(String[] args) {
         SkipList<Integer, String> skipList = new SkipList<Integer, String>(0.5d);
         skipList.put(1,"A");
-        System.out.println(skipList.get(1));
+        skipList.put(3,"C");
+        skipList.put(2,"B");
+        skipList.put(4,"D");
+        System.out.println(skipList.get(4));
 
 
     }
