@@ -26,7 +26,7 @@ public class LogHandler implements InvocationHandler{
         }
         System.out.println("LOG:EXECUTE AT "+DF.get().format(new Date()));
 
-       Object result =  method.invoke(target,args);
+        Object result =  method.invoke(target,args);
 
         System.out.println("LOG:EXECUTE FINISH AT "+DF.get().format(new Date()));
         return result;

@@ -2,8 +2,10 @@ package com.github.liaojiacan.coding.LRU实现;
 
 public abstract class LRUCache<K,V>{
 
-    public LRUCache(int capacity) {
 
+    int capacity;
+    public LRUCache(int capacity) {
+        capacity = capacity;
     }
 
     public abstract V get(K key);
